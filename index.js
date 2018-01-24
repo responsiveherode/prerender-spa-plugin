@@ -32,7 +32,8 @@ SimpleHtmlPrecompiler.prototype.apply = function (compiler) {
           var file = Path.join(folder, 'index.html')
           FS.writeFile(
           file,
-          prerenderedHTML,
+            prerenderedHTML,
+            'utf8',
           function (error) {
             if (error) {
               return reject('Could not write file: ' + file + '\n' + error)
